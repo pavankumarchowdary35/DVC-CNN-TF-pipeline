@@ -1,0 +1,99 @@
+[2023-08-03 16:43:43,141: INFO: stage_01_get_data]: 
+********************
+[2023-08-03 16:43:43,141: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2023-08-03 16:43:43,141: ERROR: stage_01_get_data]: 'Namespace' object has no attribute 'params'
+Traceback (most recent call last):
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 41, in <module>
+    get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+                                                         ^^^^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'params'
+[2023-08-03 16:44:26,605: INFO: stage_01_get_data]: 
+********************
+[2023-08-03 16:44:26,605: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2023-08-03 16:44:26,607: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-08-03 16:44:26,607: ERROR: stage_01_get_data]: 'source_data_dirs'
+Traceback (most recent call last):
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 41, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 24, in get_data
+    source_data_dirs = config["source_data_dirs"]
+                       ~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'source_data_dirs'
+[2023-08-03 16:45:28,874: INFO: stage_01_get_data]: 
+********************
+[2023-08-03 16:45:28,874: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2023-08-03 16:45:28,876: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-08-03 16:45:28,888: ERROR: stage_01_get_data]: "Unknown argument(s): {'color': 'red'}"
+Traceback (most recent call last):
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 41, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 28, in get_data
+    for source_data_dir, local_data_dir in tqdm(zip(source_data_dirs,local_data_dirs),total=N,color= "red",desc="copying directory:",):
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavan Kumar\anaconda3\envs\dvc_deeplearning_pipeline\Lib\site-packages\tqdm\std.py", line 998, in __init__
+    raise (
+tqdm.std.TqdmKeyError: "Unknown argument(s): {'color': 'red'}"
+[2023-08-03 16:51:34,697: INFO: stage_01_get_data]: 
+********************
+[2023-08-03 16:51:34,697: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2023-08-03 16:51:34,698: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-08-03 16:51:34,707: ERROR: stage_01_get_data]: "Unknown argument(s): {'color': 'green'}"
+Traceback (most recent call last):
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 41, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 28, in get_data
+    for source_data_dir, local_data_dir in tqdm(zip(source_data_dirs,local_data_dirs),total=N,color= "green",desc="copying directory:",):
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavan Kumar\anaconda3\envs\dvc_deeplearning_pipeline\Lib\site-packages\tqdm\std.py", line 998, in __init__
+    raise (
+tqdm.std.TqdmKeyError: "Unknown argument(s): {'color': 'green'}"
+[2023-08-03 16:52:43,033: INFO: stage_01_get_data]: 
+********************
+[2023-08-03 16:52:43,033: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2023-08-03 16:52:43,035: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-08-03 16:52:43,045: INFO: common]: created directory at: data/cat
+[2023-08-03 16:52:43,046: ERROR: stage_01_get_data]: [WinError 3] The system cannot find the path specified: '../outside_data/cat'
+Traceback (most recent call last):
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 41, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 30, in get_data
+    copy_files(source_data_dir, local_data_dir)
+  File "c:\users\pavan kumar\desktop\dvc_projects\dvc_deeplearning\dvc-cnn-tf-pipeline\src\utils\common.py", line 22, in copy_files
+    list_of_files = os.listdir(source_dir)
+                    ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: '../outside_data/cat'
+[2023-08-03 17:23:19,149: INFO: stage_01_get_data]: 
+********************
+[2023-08-03 17:23:19,149: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2023-08-03 17:23:19,151: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-08-03 17:23:19,168: INFO: common]: created directory at: data/cat
+[2023-08-03 17:23:19,174: ERROR: stage_01_get_data]: 'module' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 41, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\Pavan Kumar\Desktop\DVC_projects\DVC_deeplearning\DVC-CNN-TF-pipeline\src\stage_01_get_data.py", line 30, in get_data
+    copy_files(source_data_dir, local_data_dir)
+  File "c:\users\pavan kumar\desktop\dvc_projects\dvc_deeplearning\dvc-cnn-tf-pipeline\src\utils\common.py", line 25, in copy_files
+    for filename in tqdm(list_of_files,total=N,desc=f"copying files from {source_dir} to{local_dir}",):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+[2023-08-03 17:25:42,631: INFO: stage_01_get_data]: 
+********************
+[2023-08-03 17:25:42,631: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2023-08-03 17:25:42,633: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-08-03 17:25:42,633: INFO: common]: created directory at: data/cat
+[2023-08-03 17:27:46,020: INFO: common]: all the files has been copied from ../outside/cat to data/cat
+[2023-08-03 17:27:46,021: INFO: common]: created directory at: data/dog
+[2023-08-03 17:29:43,505: INFO: common]: all the files has been copied from ../outside/dog to data/dog
+[2023-08-03 17:29:43,505: INFO: stage_01_get_data]: >>>>> stage one completed!<<<<<
+
+[2023-08-03 17:31:17,445: INFO: stage_01_get_data]: 
+********************
+[2023-08-03 17:31:17,446: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2023-08-03 17:31:17,448: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-08-03 17:31:17,448: INFO: common]: created directory at: data/cat
+[2023-08-03 17:31:30,708: INFO: common]: all the files has been copied from ../outside/cat to data/cat
+[2023-08-03 17:31:30,708: INFO: common]: created directory at: data/dog
+[2023-08-03 17:31:44,481: INFO: common]: all the files has been copied from ../outside/dog to data/dog
+[2023-08-03 17:31:44,481: INFO: stage_01_get_data]: >>>>> stage one completed!<<<<<
+
