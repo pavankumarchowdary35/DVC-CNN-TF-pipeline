@@ -97,3 +97,116 @@ TypeError: 'module' object is not callable
 [2023-08-03 17:31:44,481: INFO: common]: all the files has been copied from ../outside/dog to data/dog
 [2023-08-03 17:31:44,481: INFO: stage_01_get_data]: >>>>> stage one completed!<<<<<
 
+[2023-08-03 21:22:16,508: INFO: stage_02_prepare_base_model]: 
+********************
+[2023-08-03 21:22:16,508: INFO: stage_02_prepare_base_model]: >>>>> stage two started <<<<<
+[2023-08-03 21:22:16,510: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-08-03 21:22:16,514: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-08-03 21:22:16,515: INFO: common]: created directory at: artifacts\base_model
+[2023-08-03 21:22:17,176: INFO: model]: VGG16 base model summary:
+Model: "vgg16"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 224, 224, 3)]     0         
+                                                                 
+ block1_conv1 (Conv2D)       (None, 224, 224, 64)      1792      
+                                                                 
+ block1_conv2 (Conv2D)       (None, 224, 224, 64)      36928     
+                                                                 
+ block1_pool (MaxPooling2D)  (None, 112, 112, 64)      0         
+                                                                 
+ block2_conv1 (Conv2D)       (None, 112, 112, 128)     73856     
+                                                                 
+ block2_conv2 (Conv2D)       (None, 112, 112, 128)     147584    
+                                                                 
+ block2_pool (MaxPooling2D)  (None, 56, 56, 128)       0         
+                                                                 
+ block3_conv1 (Conv2D)       (None, 56, 56, 256)       295168    
+                                                                 
+ block3_conv2 (Conv2D)       (None, 56, 56, 256)       590080    
+                                                                 
+ block3_conv3 (Conv2D)       (None, 56, 56, 256)       590080    
+                                                                 
+ block3_pool (MaxPooling2D)  (None, 28, 28, 256)       0         
+                                                                 
+ block4_conv1 (Conv2D)       (None, 28, 28, 512)       1180160   
+                                                                 
+ block4_conv2 (Conv2D)       (None, 28, 28, 512)       2359808   
+                                                                 
+ block4_conv3 (Conv2D)       (None, 28, 28, 512)       2359808   
+                                                                 
+ block4_pool (MaxPooling2D)  (None, 14, 14, 512)       0         
+                                                                 
+ block5_conv1 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_conv2 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_conv3 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_pool (MaxPooling2D)  (None, 7, 7, 512)         0         
+                                                                 
+=================================================================
+Total params: 14714688 (56.13 MB)
+Trainable params: 14714688 (56.13 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+
+[2023-08-03 21:22:17,178: WARNING: saving_utils]: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2023-08-03 21:22:17,265: INFO: model]: VGG16 base model saved at: artifacts\base_model\base_model.h5
+[2023-08-03 21:22:17,292: INFO: model]: custom model is compiled and ready to be trained
+[2023-08-03 21:22:17,294: INFO: model]: full model summary Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 224, 224, 3)]     0         
+                                                                 
+ block1_conv1 (Conv2D)       (None, 224, 224, 64)      1792      
+                                                                 
+ block1_conv2 (Conv2D)       (None, 224, 224, 64)      36928     
+                                                                 
+ block1_pool (MaxPooling2D)  (None, 112, 112, 64)      0         
+                                                                 
+ block2_conv1 (Conv2D)       (None, 112, 112, 128)     73856     
+                                                                 
+ block2_conv2 (Conv2D)       (None, 112, 112, 128)     147584    
+                                                                 
+ block2_pool (MaxPooling2D)  (None, 56, 56, 128)       0         
+                                                                 
+ block3_conv1 (Conv2D)       (None, 56, 56, 256)       295168    
+                                                                 
+ block3_conv2 (Conv2D)       (None, 56, 56, 256)       590080    
+                                                                 
+ block3_conv3 (Conv2D)       (None, 56, 56, 256)       590080    
+                                                                 
+ block3_pool (MaxPooling2D)  (None, 28, 28, 256)       0         
+                                                                 
+ block4_conv1 (Conv2D)       (None, 28, 28, 512)       1180160   
+                                                                 
+ block4_conv2 (Conv2D)       (None, 28, 28, 512)       2359808   
+                                                                 
+ block4_conv3 (Conv2D)       (None, 28, 28, 512)       2359808   
+                                                                 
+ block4_pool (MaxPooling2D)  (None, 14, 14, 512)       0         
+                                                                 
+ block5_conv1 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_conv2 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_conv3 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_pool (MaxPooling2D)  (None, 7, 7, 512)         0         
+                                                                 
+ flatten (Flatten)           (None, 25088)             0         
+                                                                 
+ dense (Dense)               (None, 2)                 50178     
+                                                                 
+=================================================================
+Total params: 14764866 (56.32 MB)
+Trainable params: 50178 (196.01 KB)
+Non-trainable params: 14714688 (56.13 MB)
+_________________________________________________________________
+
+[2023-08-03 21:22:17,369: INFO: stage_02_prepare_base_model]: full untrained model is saved at artifacts\base_model\updated_base_model.h5
+[2023-08-03 21:22:17,369: INFO: stage_02_prepare_base_model]: >>>>> stage two completed! base model is created and saved successfully <<<<<
+
