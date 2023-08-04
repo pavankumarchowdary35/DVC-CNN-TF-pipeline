@@ -5,7 +5,7 @@ stages:
     deps:
     - path: configs/config.yaml
       hash: md5
-      md5: f827da1b665702df3e6e84fa131b36ca
+      md5: 93b9a07a1c6985ef78d1a5c1f07d40d2
       size: 506
     - path: src/stage_01_get_data.py
       hash: md5
